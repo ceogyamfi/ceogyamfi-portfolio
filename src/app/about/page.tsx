@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import InteractiveAvatar from "@/components/InteractiveAvatar";
 
 export const metadata: Metadata = {
