@@ -1,7 +1,6 @@
 "use client";
 
-import { useActionState } from "react";
-import { useFormStatus } from "react-dom";
+import { useFormState, useFormStatus } from "react-dom";
 import { submitContactForm } from "@/actions/contact";
 import type { ActionResult } from "@/types";
 
@@ -31,7 +30,7 @@ function SubmitButton() {
 }
 
 export default function ContactForm() {
-  const [state, action] = useActionState(submitContactForm, initialState);
+  const [state, action] = useFormState(submitContactForm, initialState);
 
   if (state.success) {
     return (
